@@ -1,4 +1,4 @@
-# Todo {#todo}
+# Todo
 
  - [x] Create a protocol for client-server comunication
  - [x] Make it work
@@ -7,8 +7,7 @@
  - [ ] Add authentification?
 
 
-
-# Comunication protocol {#protocol}
+# Comunication protocol
 
 ## Allowed methods for sending commands to clients are:
 
