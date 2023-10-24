@@ -69,10 +69,11 @@ async def stop_handler(request):
   target = unescape(unquote(request.match_info['target']))
   port = unescape(unquote(request.match_info['port']))
   
-  for a in attacks:
-    if a.target == target and a.port == port:
+  for i, a in enumerate(attacks):
+    if a and a.target == target and a.port == port:
       a.stop()
       print('Attack cancelled.')
+      attacks[i] = None
   
   return web.Response()
 
