@@ -90,7 +90,6 @@ app.add_routes(routes)
 
 
 async def main():
-  # try:
   runner  = web.AppRunner(app)
   await runner.setup()
   site = web.TCPSite(runner, 'localhost', SERVER_PORT)
