@@ -96,6 +96,8 @@ async def main():
   site = web.TCPSite(runner, 'localhost', SERVER_PORT)
   await site.start()
   
+  print('Server running')
+  
   input_task = asyncio.create_task(input_loop())
   
   while True:

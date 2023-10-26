@@ -150,6 +150,8 @@ async def main():
   site = web.TCPSite(runner, 'localhost', CLIENT_PORT)
   await site.start()
   
+  print('Bot running')
+  
   try:
     while True:
       notified = await notify()
