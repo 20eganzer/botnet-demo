@@ -6,8 +6,8 @@ import sys
 from urllib.parse import unquote
 from html import unescape
 
-from protocol import *
 
+CLIENT_PORT, SERVER_PORT = 4444, 4242
 
 FILES_FOLDER = os.path.join('.', 'files')
 IPS_FILE = os.path.join('.', 'ips.txt')

@@ -6,9 +6,15 @@ import threading
 from urllib.parse import unquote
 from html import unescape
 
-from protocol import *
 import attack
 
+
+NOTIFY_INTERVAL = 3600
+NOTIFY_RETRY_INTERVAL = 5
+NOTIFY_TIMEOUT = 5
+
+SERVER_IP = '127.0.0.1' # localhost
+CLIENT_PORT, SERVER_PORT = 4444, 4242
 
 DOWNLOADS_FOLDER = os.path.join('.', 'files')
 
